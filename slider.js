@@ -1,13 +1,13 @@
 /**
- * Is a class that describes how Track component works
+ * Describes how Slider component works
  */
-class Track {
+class Slider {
   /**
    * [constructor is initial method]
    * @param  {[object]} component          [parent node]
    * @param  {[object]} area               [items container]
    * @param  {[object]} buttons            [control buttons]
-   * @param  {[string]} itemsSelector      [name of track items selector]
+   * @param  {[string]} itemsSelector      [name of slider items selector]
    * @param  {[string]} slideRangeSelector [name of element selector which width is slide range]
    */
   constructor(component, area, buttons, itemsSelector, slideRangeSelector) {
@@ -85,7 +85,7 @@ class Track {
   }
 }
 /**
- * [COMPONENTS is an array of components data objects that needs to be initialized by Track class]
+ * [COMPONENTS is an array of components data objects that needs to be initialized by Slider class]
  * @type {Array}
  */
 const COMPONENTS =  [{
@@ -108,7 +108,7 @@ for (let i = 0; i < COMPONENTS.length; i++) {
   let components = document.querySelectorAll(COMPONENTS[i].component);
   if (components.length > 0) {
     for (let j = 0; j < components.length; j++) {
-      new Track(
+      new Slider(
         components[j],
         components[j].querySelector(COMPONENTS[i].area),
         components[j].querySelectorAll(COMPONENTS[i].buttons),
